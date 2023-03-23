@@ -22,7 +22,8 @@
   a {
     @include b-s16-h19;
 
-    display: block;
+    display: flex;
+    align-items: center;
 
     padding-top: 21px;
     padding-right: 15px;
@@ -56,9 +57,9 @@
   a {
     display: block;
 
-    padding-top: 14px;
+    padding-top: 20px;
     padding-right: 20px;
-    padding-bottom: 14px;
+    padding-bottom: 19px;
     padding-left: 20px;
 
     transition: 0.3s;
@@ -99,4 +100,19 @@
 
     color: $white;
   }
+}
+
+.header__login::after {
+  content: '';
+  margin-left: 12px;
+  background-image: url("~@/assets/img/login.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+
+.header__login::after, .header__logout::before, .header__user img {
+  display: inline-block;
+  width: 20px;
+  height: 22px;
+  vertical-align: middle;
 }

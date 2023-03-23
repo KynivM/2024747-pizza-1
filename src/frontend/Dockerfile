@@ -4,9 +4,9 @@ WORKDIR /frontend
 
 COPY package.json package-lock.json ./
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 
-RUN npm install @vue/cli@4.5.8 -g
+RUN npm install @vue/cli@4.5.8 -g --legacy-peer-deps
 
 COPY . .
 
