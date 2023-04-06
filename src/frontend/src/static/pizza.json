@@ -38,11 +38,13 @@
     {
       "id": 1,
       "name": "Томатный",
+      "name_eng": "tomato",
       "price": 50
     },
     {
       "id": 2,
       "name": "Сливочный",
+      "name_eng": "creamy",
       "price": 50
     }
   ],
