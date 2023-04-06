@@ -4,6 +4,7 @@
     :class="`dough__input--${dough.name_eng}`"
     :group-name="'dough'"
     :radio-button-value="dough.name_eng"
+    @change="$emit('select-dough', { name_eng: dough.name_eng, price: dough.price })"
   >
     <b>{{ dough.name }}</b>
     <span>{{ dough.description }}</span>

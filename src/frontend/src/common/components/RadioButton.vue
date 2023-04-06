@@ -5,6 +5,7 @@
       :name="groupName"
       :value="radioButtonValue"
       class="visually-hidden"
+      @change="$emit('change', radioButtonValue)"
     />
     <slot></slot>
   </label>

@@ -7,6 +7,7 @@
       :key="sauce.id"
       :group-name="'sauce'"
       :radio-button-value="sauce.name_eng"
+      @change="$emit('select-sauce', { name_eng: sauce.name_eng, price: sauce.price })"
     >
       <span>{{ sauce.name }}</span>
     </radio-button>
