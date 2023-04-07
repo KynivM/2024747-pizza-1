@@ -1,12 +1,13 @@
 <template>
-  <div id="app-layout">
-    <app-layout-header />
-    <app-layout-main :pizza="pizza" />
-  </div>
+  <component :is="layout">
+    <slot />
+  </component>
 </template>
 <script>
 import AppLayoutHeader from "@/layouts/AppLayoutHeader";
 import AppLayoutMain from "@/layouts/AppLayoutMain";
+
+const defaultLayout = "AppLayoutDefault";
 
 export default {
   name: "AppLayout",
@@ -14,11 +15,10 @@ export default {
     AppLayoutHeader,
     AppLayoutMain,
   },
-
-  props: {
-    pizza: {
-      type: Object,
-      required: true,
+  computed: {
+    layout() {
+      const layout = this.$route.meta.layout || defaultLayout;
+      return () => import(`@/layouts/${layout}.vue`);
     },
   },
 };

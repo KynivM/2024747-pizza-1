@@ -54,12 +54,14 @@
 }
 
 .header__user {
+  display: flex;
+  align-items: center;
   a {
     display: block;
 
-    padding-top: 20px;
+    padding-top: 14px;
     padding-right: 20px;
-    padding-bottom: 19px;
+    padding-bottom: 14px;
     padding-left: 20px;
 
     transition: 0.3s;
@@ -84,7 +86,7 @@
 
     width: 32px;
     height: 32px;
-    margin-right: 8px;
+    margin-right: 12px;
 
     vertical-align: middle;
 
@@ -102,7 +104,7 @@
   }
 }
 
-.header__login::after {
+.header__login::after, .header__logout::before {
   content: '';
   margin-left: 12px;
   background-image: url("~@/assets/img/login.svg");
@@ -110,9 +112,9 @@
   background-position-y: center;
 }
 
-.header__login::after, .header__logout::before, .header__user img {
+.header__login::after, .header__logout::before {
   display: inline-block;
-  width: 20px;
-  height: 22px;
+  width: 32px;
+  height: 32px;
   vertical-align: middle;
 }
